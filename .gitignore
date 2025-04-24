@@ -1,0 +1,5 @@
+config.local.json
+config.dev.json
+config.json
+_ignore*
+.generated/*

@@ -1,0 +1,74 @@
+[
+  {
+    "label": "Run App (Hot Reload)",
+    "type": "shell",
+    "command": "nodemon --exec go",
+    "args": ["run", "cmd/web/main.go", "--signal SIGTERM"],
+    "group": {
+      "kind": "run",
+      "isDefault": true
+    },
+    "problemMatcher": ["$go"],
+    "detail": "Run the Go application located at cmd/web/main.go with hot reload"
+  },
+  {
+    "label": "Run App",
+    "type": "shell",
+    "command": "go",
+    "args": ["run", "cmd/web/main.go", "--signal SIGTERM"],
+    "group": {
+      "kind": "run",
+      "isDefault": true
+    },
+    "problemMatcher": ["$go"],
+    "detail": "Run the Go application located at cmd/web/main.go"
+  },
+  {
+    "label": "Migration Up",
+    "type": "shell",
+    "command": "go",
+    "args": ["run", "cmd/migration/main.go", "--up"],
+    "group": {
+      "kind": "run",
+      "isDefault": true
+    },
+    "problemMatcher": ["$go"],
+    "detail": "Run Migration UP"
+  },
+  {
+    "label": "Migration Down",
+    "type": "shell",
+    "command": "go",
+    "args": ["run", "cmd/migration/main.go", "--down"],
+    "group": {
+      "kind": "run",
+      "isDefault": true
+    },
+    "problemMatcher": ["$go"],
+    "detail": "Run Migration Down"
+  },
+  {
+    "label": "Migration Refresh",
+    "type": "shell",
+    "command": "go",
+    "args": ["run", "cmd/migration/main.go", "--refresh"],
+    "group": {
+      "kind": "run",
+      "isDefault": true
+    },
+    "problemMatcher": ["$go"],
+    "detail": "Run Migration Refresh"
+  },
+  {
+    "label": "Migration Reset",
+    "type": "shell",
+    "command": "go",
+    "args": ["run", "cmd/migration/main.go", "--reset"],
+    "group": {
+      "kind": "run",
+      "isDefault": true
+    },
+    "problemMatcher": ["$go"],
+    "detail": "Run Migration Reset"
+  }
+]

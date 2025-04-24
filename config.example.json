@@ -1,0 +1,62 @@
+{
+  "app": {
+    "name": "your-app-name"
+  },
+  "web": {
+    "prefork": false,
+    "port": 1323
+  },
+  "log": {
+    "level": 6
+  },
+  "jwt": {
+    "access": {
+      "secret": "your-very-strong-access-key",
+      "expired": 15,
+      "maxAge": 15
+    },
+    "refresh": {
+      "secret": "your-very-strong-refresh-key",
+      "expired": 4320,
+      "maxAge": 4320
+    }
+  },
+  "database": {
+    "app": {
+      "host": "app_db_host",
+      "port": 1433,
+      "username": "app_db_username",
+      "password": "app_db_password",
+      "name": "app_db_name",
+      "pool": {
+        "idle": 10,
+        "max": 100,
+        "lifetime": 300
+      }
+    },
+    "anotherDb": {
+      "host": "your-anotherDB-host",
+      "port": 1433,
+      "username": "another_db_username",
+      "password": "another_db_password",
+      "name": "another_db_name",
+      "pool": {
+        "idle": 10,
+        "max": 100,
+        "lifetime": 300
+      }
+    }
+  },
+  "api": {
+    "sso": {
+      "url": "https://your-external-api-url.com/",
+      "secret": "your-external-api-secret"
+    },
+    "webdav": {
+      "user": "your-webdav-user",
+      "url": "https://your-external-api-url.com/",
+      "secret": "your-webdav-secret",
+      "path": "/your-webdav-path"
+    }
+  }
+}
